@@ -88,6 +88,13 @@ export const projectsData = [
     tags: ["React", "Redux", "Flask", "SQL-Alchemy"],
     imageUrl: sketchy,
   },
+  {
+    title: "DoorDash",
+    description:
+      "A static clone of DoorDash Landing Page",
+    tags: ["HTML", "CSS"],
+    imageUrl: doordash,
+  },
 ] as const;
 
 export const skillsData = [
