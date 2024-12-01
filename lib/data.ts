@@ -7,10 +7,10 @@ import rmtdevImg from "@/public/rmtdev.png";
 import wordanalyticsImg from "@/public/wordanalytics.png";
 
 
-import annbnb from '@/public/AnnBnb.png';
-import cultivate from '@/public/Cultivate.png';
-import sketchy from '@/public/Sketchy.png';
-import doordash from '@/public/DoorDash.png';
+import annbnb from '@/public/projects/AnnBnb.png';
+import cultivate from '@/public/projects/Cultivate.png';
+import sketchy from '@/public/projects/Sketchy.png';
+import doordash from '@/public/projects/DoorDash.png';
 
 export const links = [
   {
