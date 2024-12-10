@@ -3,6 +3,10 @@
 import Image from "next/image"
 import profile from "@/public/profile.png"
 import { motion } from "framer-motion"
+import Link from "next/link";
+import { BsArrowRight, BsLinkedin } from "react-icons/bs";
+import { HiDownload } from "react-icons/hi";
+import { FaGitSquare } from "react-icons/fa";
 
 
 export default function Intro() {
@@ -71,6 +75,23 @@ export default function Intro() {
                 </span>
 
             </p> */}
+            <div className="flex flex-col sm:flex-row">
+                <Link
+                href="#contact"
+                className="bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full"
+                >Contact me here <BsArrowRight />
+                </Link>
+
+                <a className="bg-white px-7 py-3 flex items-center gap-2 rounded-full"
+                >Download CV <HiDownload /></a>
+
+                <a className="bg-white text-gray-700 p-4 flex items-center gap-2 rounded-full">
+                    <BsLinkedin />
+                </a>
+                <a className="bg-white text-gray-700 p-4 flex items-center gap-2 rounded-full">
+                    <FaGitSquare />
+                </a>
+            </div>
         </section>
     )
 };
