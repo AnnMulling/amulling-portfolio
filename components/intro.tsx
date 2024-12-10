@@ -6,7 +6,7 @@ import { motion } from "framer-motion"
 import Link from "next/link";
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
-import { FaGitSquare } from "react-icons/fa";
+import { FaGithubSquare } from "react-icons/fa";
 
 
 export default function Intro() {
@@ -103,7 +103,7 @@ export default function Intro() {
                 <a
                     href="https://github.com/AnnMulling" target="_blank"
                     className="bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15]  hover:text-gray-950 active:scale-105 transition-all cursor-pointer border border-black/10">
-                    <FaGitSquare />
+                    <FaGithubSquare />
                 </a>
             </motion.div>
         </section>
