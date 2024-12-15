@@ -2,9 +2,9 @@ import React from 'react'
 
 export default function About() {
     return (
-        <section>
-            <h2 className="text-3xl font-medium capitalize">About me</h2>
-            <p>
+        <section className="mb-24 max-w-[45rem] text-center leading-8">
+            <h2 className="text-3xl font-medium capitalize mb-8">About me</h2>
+            <p className="mb-3">
                 I'm a creative and easy-going individual who loves tackling new challenges.
                 I bring a mix of curiosity and adaptability to everything I do.
                 Whether it's collaborating with others or diving into solo projects,
