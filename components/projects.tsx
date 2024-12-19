@@ -3,22 +3,32 @@ import SectionHeading from './section-heading'
 import { projectsData } from '@/lib/data'
 
 export default function Projects() {
-  return (
-   <section>
-        <SectionHeading>My projects
+    return (
+        <section>
+            <SectionHeading>My projects
 
-        </SectionHeading>
-        <div>
-            {
-                projectsData.map((project, index) => (
-                    <Project key={index} />
-                ))
-            }
-        </div>
-   </section>
-  )
+            </SectionHeading>
+            <div>
+                {
+                    projectsData.map((project, index) => (
+                        <React.Fragment key={index}>
+                            <Project {...project} />
+                        </React.Fragment>
+                    ))
+                }
+            </div>
+        </section>
+    )
 }
 
-function Project () {
-    return <div></div>
+type ProjectProps =  (typeof projectsData)[0]
+
+function Project({
+    title,
+    description,
+    tags,
+    imageUrl
+}: ProjectProps
+) {
+    return <div>{title}</div>
 }
