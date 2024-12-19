@@ -1,7 +1,13 @@
 import React from "react";
+import { motion } from "framer-motion";
 
-export default function SectionHeadingg() {
+type SectionHeadingProps = {
+    children: React.ReactNode;
+}
+
+export default function SectionHeading({
+     children }: SectionHeadingProps) {
   return (
-    <h2 className="text-3xl font-medium capitalize mb-8">About me</h2>
+    <h2 className="text-3xl font-medium capitalize mb-8">{children}</h2>
   )
 }
