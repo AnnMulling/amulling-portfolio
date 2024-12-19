@@ -21,7 +21,7 @@ export default function Projects() {
     )
 }
 
-type ProjectProps =  (typeof projectsData)[0]
+type ProjectProps =  (typeof projectsData)[number]
 
 function Project({
     title,
@@ -30,5 +30,5 @@ function Project({
     imageUrl
 }: ProjectProps
 ) {
-    return <div>{title}</div>
+    return <article></article>
 }
