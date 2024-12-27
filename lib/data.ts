@@ -77,7 +77,7 @@ export const projectsData = [
   {
     title: "AnnBnb",
     description:
-      "Full-Stack Clone of Airbnb.  The crafted interface provides a balance of redundancy for user-friendly navigation, ensuring an intuitive experience. The visual design is clean, avoiding a cluttered or chaotic appearance.",
+      "A Full-Stack Airbnb Clone featuring a clean and intuitive design. The interface is user-friendly, with thoughtful navigation that balances simplicity and functionality.",
     tags: ["React", "Redux", "Express", "SQL",],
     imageUrl: annbnb,
   },
