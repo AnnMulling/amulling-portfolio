@@ -3,7 +3,7 @@
 import { projectsData } from "@/lib/data";
 import { useRef } from "react";
 import Image from "next/image";
-import { motion, useScroll } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 
 
@@ -21,6 +21,7 @@ export default function Project({
         target: ref,
         offset: ["0 1", "1.33 1"],
     });
+    useTransform(scrollYProgress, [0, 1], [0.5, 1])
 
     return (
         <motion.div
