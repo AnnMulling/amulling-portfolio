@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useState, createContext } from 'react';
 import { links } from "@/lib/data";
 
@@ -13,7 +15,7 @@ type ActiveSectionContextType = {
     setActiveSection: React.Dispatch<React.SetStateAction<SectionName>>
 }
 
-const ActiveSectionContext = createContext<ActiveSectionContextType | null >(null);
+export const ActiveSectionContext = createContext<ActiveSectionContextType | null >(null);
 
 export default function ActiveSectionContextProvider({
     children,
