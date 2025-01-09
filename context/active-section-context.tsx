@@ -6,7 +6,7 @@ import { links } from "@/lib/data";
 
 type SectionName = typeof links[number]["name"];
 
-type ActiveSectionContextProvider = {
+type ActiveSectionContextProviderProps = {
     children: React.ReactNode;
 };
 
@@ -19,7 +19,7 @@ export const ActiveSectionContext = createContext<ActiveSectionContextType | nul
 
 export default function ActiveSectionContextProvider({
     children,
-}: ActiveSectionContextProvider) {
+}: ActiveSectionContextProviderProps) {
     const [activeSection, setActiveSection] = useState<SectionName>("Home");
 
     return (
@@ -27,7 +27,10 @@ export default function ActiveSectionContextProvider({
             value={{
                 activeSection,
                 setActiveSection
-            }}>{children}</ActiveSectionContext.Provider>
+            }}
+        >
+            {children}
+        </ActiveSectionContext.Provider>
     );
 }
 
@@ -35,10 +38,10 @@ export function useActiveSectionContext() {
     const context = useContext(ActiveSectionContext);
 
     if (context === null) {
-        throw new Error (
-            "useActiveSectionContext must be used within an ActiveSectionContextProvider"
+        throw new Error(
+          "useActiveSectionContext must be used within an ActiveSectionContextProvider"
         );
-    }
+      }
 
     return context;
 }

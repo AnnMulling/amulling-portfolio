@@ -8,13 +8,13 @@ import { useActiveSectionContext } from '@/context/active-section-context';
 
 export default function About() {
    const { ref, inView }  = useInView();
-   const { setActiveSection } = useActiveSectionContext();
+//    const { setActiveSection } = useActiveSectionContext();
 
-   useEffect(() => {
-    if (inView) {
-        setActiveSection("About");
-    }
-   }, [inView, setActiveSection]);
+//    useEffect(() => {
+//     if (inView) {
+//         setActiveSection("About");
+//     }
+//    }, [inView, setActiveSection]);
 
 
 
