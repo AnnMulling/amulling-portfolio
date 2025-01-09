@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState, createContext } from 'react';
+import React, { useState, createContext, useContext } from 'react';
 import { links } from "@/lib/data";
 
 
@@ -28,5 +28,17 @@ export default function ActiveSectionContextProvider({
                 activeSection,
                 setActiveSection
             }}>{children}</ActiveSectionContext.Provider>
-    )
+    );
+}
+
+export function useActiveSectionContext() {
+    const context = useContext(ActiveSectionContext);
+
+    if (context === null) {
+        throw new Error (
+            "useActiveSectionContext must be used within an ActiveSectionContextProvider"
+        );
+    }
+
+    return context;
 }
