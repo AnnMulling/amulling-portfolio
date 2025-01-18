@@ -7,11 +7,28 @@ import Link from "next/link";
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
+import { useEffect } from "react";
+import { useActiveSectionContext } from "@/context/active-section-context";
+import { useInView } from "react-intersection-observer";
 
 
 export default function Intro() {
+
+    const { ref, inView } = useInView({
+        threshold: 0.5,
+    });
+    const { setActiveSection } = useActiveSectionContext();
+
+    useEffect(() => {
+        if (inView) {
+            setActiveSection("Home");
+        }
+    }, [inView, setActiveSection]);
+
+
+
     return (
-        <section id="home" className="mb-28 max-w[50rem] text-center sm:mb-0 scroll-mt-[100rem]">
+        <section ref={ref} id="home" className="mb-28 max-w[50rem] text-center sm:mb-0 scroll-mt-[100rem]">
             <div className="flex items-center justify-center">
                 <div className="relative">
                     <motion.div
@@ -86,13 +103,13 @@ export default function Intro() {
                 <Link
                     href="#contact"
                     className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition-all"
-                >Contact me here <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition"/>
+                >Contact me here <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
                 </Link>
 
                 <a
                     href="/CV.pdf" download
                     className=" group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition-all cursor-pointer border border-black/10"
-                >Download CV <HiDownload className="opacity-60 group-hover:translate-y-1 transition"/>
+                >Download CV <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
                 </a>
 
                 <a
