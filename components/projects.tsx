@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useEffect } from 'react';
 import SectionHeading from './section-heading';
 import { projectsData } from '@/lib/data';
@@ -12,7 +14,6 @@ export default function Projects() {
     });
     const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
 
-
     useEffect(() => {
         if (inView && Date.now() - timeOfLastClick > 1000) {
             setActiveSection("Projects");
@@ -20,7 +21,7 @@ export default function Projects() {
     }, [inView, setActiveSection, timeOfLastClick]);
 
     return (
-        <section  id="projects" className="scroll-mt-28">
+        <section  ref={ref} id="projects" className="scroll-mt-28">
             <SectionHeading>My projects
 
             </SectionHeading>
