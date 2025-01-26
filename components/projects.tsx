@@ -4,10 +4,10 @@ import React from 'react';
 import SectionHeading from './section-heading';
 import { projectsData } from '@/lib/data';
 import Project from './project';
-
+import { useSectionInView } from "@/lib/hooks";
 
 export default function Projects() {
-   const {ref} = useSectionInView("Projects", 0.5);
+    const {ref} = useSectionInView("Projects", 0.5);
 
     return (
         <section  ref={ref} id="projects" className="scroll-mt-28">
@@ -26,6 +26,4 @@ export default function Projects() {
         </section>
     )
 }
-function useSectionInView(arg0: string, arg1: number): { ref: any; } {
-    throw new Error('Function not implemented.');
-}
+
