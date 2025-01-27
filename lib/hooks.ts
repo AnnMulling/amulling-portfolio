@@ -19,4 +19,4 @@ export function useSectionInView(sectionName : SectionName, threshold = 0.75) {
     return {
         ref
     }
-}
+};
