@@ -1,10 +1,6 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import corpcommentImg from "@/public/corpcomment.png";
-import rmtdevImg from "@/public/rmtdev.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
 
 
 import annbnb from '@/public/projects/AnnBnb.png';
@@ -53,7 +49,7 @@ export const experiencesData = [
     location: "Generation USA",
     description:
       "Completed an 18-week Jr. Cloud Practitioner program with 300+ hours of training in cloud infrastructure deployment, configuration, and management. Gained basic knowledge of Linux, Python, AWS, and DevOps for cloud-based IT operations.",
-    icon: React.createElement(CgWorkAlt),
+    icon: React.createElement(LuGraduationCap),
     date: "2021",
   },
   {
@@ -61,7 +57,7 @@ export const experiencesData = [
     location: "Payap University",
     description:
      "Earned a bachelor's degree in English from Thailand, focusing on language, communication, literature, and cultural studies.",
-    icon: React.createElement(CgWorkAlt),
+    icon: React.createElement(LuGraduationCap),
     date: "2018",
   },
 ,
