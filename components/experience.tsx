@@ -10,6 +10,9 @@ export default function Experience() {
   return (
     <section id="experience">
         <SectionHeading>My experience</SectionHeading>
+        <VerticalTimeline>
+            <VerticalTimelineElement></VerticalTimelineElement>
+        </VerticalTimeline>
     </section>
   )
 }
