@@ -4,20 +4,37 @@ import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
+const validatateString = (value: unknown) => {
+    if (!value || typeof value !== "string") {
+        return {
+            error: "Invalid message"
+        };
+      };
+      return true;
+}
+
+//server side validation
 export const sendEmail = async (formData: FormData) => {
-  const sender = formData.get("email");
+  const senderEmail = formData.get("email");
   const message = formData.get("message");
 
-  if (!message || typeof message !== "string") {
+  if (!validatateString(sendEmail)) {
     return {
-        error: "Invalid message"
+        error: "Invalid sender email",
     };
-  }
+  };
+
+  if (!validatateString(message)) {
+    return {
+        error: "Invalid message",
+    };
+  };
 
   resend.emails.send({
     from: "onboarding@resend.dev",
     to: "p.annmulling@gmail.com",
     subject: "message from contact form",
+    reply_to: senderEmail,
     text: message,
   });
 };
