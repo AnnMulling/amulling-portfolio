@@ -70,6 +70,7 @@ export const projectsData = [
       "Full-Stack clone of Trello website with extended functionalities feature inspired by the Forest application.",
     tags: ["React", "Redux", "Express", "SQL",],
     imageUrl: cultivate,
+    url: "https://cultivate-project.onrender.com"
   },
   {
     title: "AnnBnb",
@@ -77,6 +78,7 @@ export const projectsData = [
       "A Full-Stack Airbnb Clone featuring a clean and intuitive design. The interface is user-friendly, with thoughtful navigation that balances simplicity and functionality.",
     tags: ["React", "Redux", "Express", "SQL",],
     imageUrl: annbnb,
+    url: "https://api-aribnb-project.onrender.com"
   },
   {
     title: "Sketchy",
@@ -84,6 +86,7 @@ export const projectsData = [
       "Full-Stack clone/inspired by Etsy website. a lively worldwide marketplace designed for artists and other show people to display their 'unique' items as well as sell their 'unique' goods",
     tags: ["React", "Redux", "Flask", "SQL-Alchemy"],
     imageUrl: sketchy,
+    url: "https://sketchy_v2.onrender.com/"
   },
   {
     title: "DoorDash",
@@ -91,6 +94,7 @@ export const projectsData = [
       "A static clone of DoorDash Landing Page",
     tags: ["HTML", "CSS"],
     imageUrl: doordash,
+    url: "https://annmulling.github.io/pixel-clone-doordash/"
   },
 ] as const;
 
