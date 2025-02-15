@@ -4,7 +4,7 @@ import React from 'react';
 import SectionHeading from './section-heading';
 import { motion } from 'framer-motion';
 import { useSectionInView } from '@/lib/hooks';
-import { sendEmail } from '@/actions/sendEmail';
+// import { sendEmail } from '@/actions/sendEmail';
 import SubmitBtn from './submit-btn';
 
 export default function Contact() {
@@ -14,7 +14,7 @@ export default function Contact() {
     return (
         <motion.section
             ref={ref}
-            id="contact"
+            id="Contact"
             className="mb-20 sm:mb-28 w-[min(100%,38rem)]"
             initial={{
                 opacity: 0,
@@ -30,14 +30,14 @@ export default function Contact() {
             }}
         >
             <SectionHeading>Contact me</SectionHeading>
-            <p className="text-gray-700 -mt-5 dark:text-white/80">Please contact me directly at
+            <p className="text-gray-700 -mt-5 dark:text-white/80 text-center">Please contact me directly at
                 <a className="underline" href="mailto:p.annmulling@gmail.com">
                     {" "}p.annmulling@gmail.com {" "}
                 </a>
-                or through this form.
+
             </p>
 
-            <form
+            {/* <form
                 className="mt-10 flex flex-col dark:text-black"
                 action={async formData => {
                     const { data, error } = await sendEmail(formData);
@@ -73,7 +73,7 @@ export default function Contact() {
                     maxLength={500}
                 />
                 <SubmitBtn />
-            </form>
+            </form> */}
         </motion.section>
     )
 }
